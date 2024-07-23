@@ -1,4 +1,4 @@
-group 'com.xiaopeng.tool.xp_tool'
+group 'com.xiaopeng.tool.common_tools'
 version '1.0'
 
 buildscript {
@@ -31,7 +31,7 @@ android {
     }
 
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion 24
     }
 }
 

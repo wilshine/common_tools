@@ -3,7 +3,6 @@ import 'dart:io';
 import 'package:flutter/foundation.dart';
 import 'package:path/path.dart' show join;
 import 'package:path_provider/path_provider.dart';
-import 'package:xp_xlog/xp_xlog.dart';
 
 import 'log_manager.dart';
 
@@ -16,8 +15,8 @@ class XLogManager extends LogManager {
     if (!isExists) {
       await file.create();
     }
-    XpXlog.initXlog(logPath, prefix, '');
-    XpXlog.flush();
+    // XpXlog.initXlog(logPath, prefix, '');
+    // XpXlog.flush();
   }
 
   @override
@@ -25,7 +24,7 @@ class XLogManager extends LogManager {
     if (kDebugMode) {
       print(msg.toString());
     } else {
-      XpXlog.debug(tag, msg);
+      // XpXlog.debug(tag, msg);
     }
   }
 
@@ -34,7 +33,7 @@ class XLogManager extends LogManager {
     if (kDebugMode) {
       print(msg.toString());
     } else {
-      XpXlog.info(tag, msg);
+      // XpXlog.info(tag, msg);
     }
   }
 
@@ -43,7 +42,7 @@ class XLogManager extends LogManager {
     if (kDebugMode) {
       print(msg.toString());
     } else {
-      XpXlog.warning(tag, msg);
+      // XpXlog.warning(tag, msg);
     }
   }
 
@@ -52,7 +51,7 @@ class XLogManager extends LogManager {
     if (kDebugMode) {
       print(msg.toString());
     } else {
-      XpXlog.error(tag, msg);
+      // XpXlog.error(tag, msg);
     }
   }
 }

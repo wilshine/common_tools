@@ -37,7 +37,7 @@ class MethodChannelXpTool extends XpToolPlatform {
 
   /// The method channel used to interact with the native platform.
   @visibleForTesting
-  final methodChannel = const MethodChannel('xp_tool');
+  final methodChannel = const MethodChannel('common_tools');
 
   @override
   Future<String?> getPlatformVersion() async {

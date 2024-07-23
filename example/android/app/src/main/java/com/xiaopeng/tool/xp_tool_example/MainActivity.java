@@ -1,4 +1,4 @@
-package com.xiaopeng.tool.xp_tool_example;
+package com.xiaopeng.tool.common_tools_example;
 
 import io.flutter.embedding.android.FlutterActivity;
 

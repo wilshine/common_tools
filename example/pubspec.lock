@@ -573,15 +573,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.0"
-  xp_xlog:
-    dependency: transitive
-    description:
-      path: "."
-      ref: "1.2.4"
-      resolved-ref: "075abec762b8ba14521db03ea634cf4d04b9fabf"
-      url: "ssh://git@gitlab.xiaopeng.local:10022/xp_flutter_pub/xp-flutter-xlog.git"
-    source: git
-    version: "0.0.1"
 sdks:
   dart: ">=3.0.0-0 <4.0.0"
   flutter: ">=3.3.0"

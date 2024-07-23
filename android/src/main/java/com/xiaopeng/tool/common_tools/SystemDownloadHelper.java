@@ -1,4 +1,4 @@
-package com.xiaopeng.tool.xp_tool;
+package com.xiaopeng.tool.common_tools;
 
 import android.app.DownloadManager;
 import android.content.ActivityNotFoundException;

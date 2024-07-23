@@ -1,4 +1,4 @@
-package com.xiaopeng.tool.xp_tool;
+package com.xiaopeng.tool.common_tools;
 
 import androidx.annotation.NonNull;
 
@@ -18,7 +18,7 @@ public class XpToolPlugin implements FlutterPlugin, MethodCallHandler {
 
   @Override
   public void onAttachedToEngine(@NonNull FlutterPluginBinding flutterPluginBinding) {
-    channel = new MethodChannel(flutterPluginBinding.getBinaryMessenger(), "xp_tool");
+    channel = new MethodChannel(flutterPluginBinding.getBinaryMessenger(), "common_tools");
     channel.setMethodCallHandler(this);
   }
 

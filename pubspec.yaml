@@ -26,11 +26,6 @@ dependencies:
   flutter_downloader: 
   open_file_plus: 3.4.1
   permission_handler: 10.2.0
-  xp_xlog:
-    git:
-      url: ssh://git@gitlab.xiaopeng.local:10022/xp_flutter_pub/xp-flutter-xlog.git
-      ref: '1.2.4'
-
 
 dev_dependencies:
   flutter_test:
@@ -42,7 +37,7 @@ flutter:
   plugin:
     platforms:
       android:
-        package: com.xiaopeng.tool.xp_tool
+        package: com.xiaopeng.tool.common_tools
         pluginClass: XpToolPlugin
       ios:
         pluginClass: XpToolPlugin
