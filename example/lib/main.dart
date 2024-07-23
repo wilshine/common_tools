@@ -51,10 +51,8 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: Scaffold(body: buildBody()),
+      theme: ThemeData(primarySwatch: Colors.blue),
+      home: Scaffold(body: SafeArea(child: buildBody())),
     );
   }
 
@@ -134,7 +132,6 @@ class _MyHomePageState extends State<MyHomePage> {
           ElevatedButton(onPressed: test8, child: const Text('测试MMKV')),
           ElevatedButton(onPressed: test9, child: const Text('测试安装APK')),
           ElevatedButton(onPressed: test10, child: const Text('测试日志')),
-
         ],
       ),
     );
