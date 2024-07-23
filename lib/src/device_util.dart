@@ -96,7 +96,7 @@ class DeviceUtil {
   }
 
   /// 临时目录
-  /// /data/user/9/com.xiaopeng.scepter/cache
+  /// /data/user/9/com.ws.scepter/cache
   /// Android为getCacheDir
   /// iOS为NSCachesDirectory
   static Future<String> getTempDir() async {
@@ -105,7 +105,7 @@ class DeviceUtil {
   }
 
   /// 支持文件目录
-  /// /data/user/0/com.xiaopeng.scepter/files
+  /// /data/user/0/com.ws.scepter/files
   /// Android为getFilesDir
   /// iOS为NSApplicationSupportDirectory
   static Future<String> getAppSupportDir() async {
@@ -116,7 +116,7 @@ class DeviceUtil {
   /// 应用程序可以访问定级存储的目录路径
   /// 只在Android中可用，iOS会抛出异常
   /// 对应为getExternalFilesDir
-  /// /storage/emulated/0/Android/data/com.xiaopeng.scepter/files
+  /// /storage/emulated/0/Android/data/com.ws/files
   static Future<String> getExternalStorageDir() async {
     var directory = await getExternalStorageDirectory();
     return Future.value(directory?.path);
@@ -124,7 +124,7 @@ class DeviceUtil {
 
   /// 外部缓存目录集合，仅用于Android
   /// 对应 getExternalCacheDirs或getExternalCacheDir(sdk<19)
-  /// [Directory: '/storage/emulated/0/Android/data/com.xiaopeng.scepter/cache']
+  /// [Directory: '/storage/emulated/0/Android/data/com.ws/cache']
   static Future<List> getExternalCacheDirs() async {
     var directory = await getExternalCacheDirectories();
     return Future.value(directory?.toList());
@@ -132,7 +132,7 @@ class DeviceUtil {
 
   /// 可以存储应用程序特定数据的目录的路径。 这些路径通常位于外部存储（如单独的分区或SD卡）上。
   /// 由于此功能仅在Android上可用
-  /// [Directory: '/storage/emulated/0/Android/data/com.xiaopeng.scepter/files']
+  /// [Directory: '/storage/emulated/0/Android/data/com.ws/files']
   static Future<List> getExternalStorageDirs() async {
     if (Platform.isAndroid) {
       var directory = await getExternalStorageDirectories();

@@ -1,4 +1,4 @@
-package com.xiaopeng.tool.common_tools;
+package com.ws.tool.common_tools;
 
 import android.content.Context;
 import android.os.Handler;

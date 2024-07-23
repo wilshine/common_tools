@@ -1,4 +1,4 @@
-group 'com.xiaopeng.tool.common_tools'
+group 'com.ws.tool.common_tools'
 version '1.0'
 
 buildscript {
