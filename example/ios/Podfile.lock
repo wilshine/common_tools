@@ -1,0 +1,91 @@
+PODS:
+  - device_info (0.0.1):
+    - Flutter
+  - device_info_plus (0.0.1):
+    - Flutter
+  - Flutter (1.0.0)
+  - MMKV (1.2.15):
+    - MMKVCore (~> 1.2.15)
+  - MMKVCore (1.2.15)
+  - mmkvflutter (1.2.15):
+    - Flutter
+    - MMKV (>= 1.2.15)
+  - open_file (0.0.1):
+    - Flutter
+  - package_info (0.0.1):
+    - Flutter
+  - path_provider (0.0.1):
+    - Flutter
+  - permission_handler_apple (9.0.4):
+    - Flutter
+  - SSZipArchive (2.4.3)
+  - url_launcher_ios (0.0.1):
+    - Flutter
+  - xp_tool (0.0.1):
+    - Flutter
+  - xp_xlog (0.0.1):
+    - Flutter
+    - SSZipArchive
+
+DEPENDENCIES:
+  - device_info (from `.symlinks/plugins/device_info/ios`)
+  - device_info_plus (from `.symlinks/plugins/device_info_plus/ios`)
+  - Flutter (from `Flutter`)
+  - mmkvflutter (from `.symlinks/plugins/mmkvflutter/ios`)
+  - open_file (from `.symlinks/plugins/open_file/ios`)
+  - package_info (from `.symlinks/plugins/package_info/ios`)
+  - path_provider (from `.symlinks/plugins/path_provider/ios`)
+  - permission_handler_apple (from `.symlinks/plugins/permission_handler_apple/ios`)
+  - url_launcher_ios (from `.symlinks/plugins/url_launcher_ios/ios`)
+  - xp_tool (from `.symlinks/plugins/xp_tool/ios`)
+  - xp_xlog (from `.symlinks/plugins/xp_xlog/ios`)
+
+SPEC REPOS:
+  trunk:
+    - MMKV
+    - MMKVCore
+    - SSZipArchive
+
+EXTERNAL SOURCES:
+  device_info:
+    :path: ".symlinks/plugins/device_info/ios"
+  device_info_plus:
+    :path: ".symlinks/plugins/device_info_plus/ios"
+  Flutter:
+    :path: Flutter
+  mmkvflutter:
+    :path: ".symlinks/plugins/mmkvflutter/ios"
+  open_file:
+    :path: ".symlinks/plugins/open_file/ios"
+  package_info:
+    :path: ".symlinks/plugins/package_info/ios"
+  path_provider:
+    :path: ".symlinks/plugins/path_provider/ios"
+  permission_handler_apple:
+    :path: ".symlinks/plugins/permission_handler_apple/ios"
+  url_launcher_ios:
+    :path: ".symlinks/plugins/url_launcher_ios/ios"
+  xp_tool:
+    :path: ".symlinks/plugins/xp_tool/ios"
+  xp_xlog:
+    :path: ".symlinks/plugins/xp_xlog/ios"
+
+SPEC CHECKSUMS:
+  device_info: d7d233b645a32c40dfdc212de5cf646ca482f175
+  device_info_plus: e5c5da33f982a436e103237c0c85f9031142abed
+  Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
+  MMKV: 7f34558bbb5a33b0eaefae2de4b6a20a2ffdad6f
+  MMKVCore: ddf41b9d9262f058419f9ba7598719af56c02cd3
+  mmkvflutter: adff7ed724316d0cea22d65b59f43d467fc57403
+  open_file: 02eb5cb6b21264bd3a696876f5afbfb7ca4f4b7d
+  package_info: 873975fc26034f0b863a300ad47e7f1ac6c7ec62
+  path_provider: abfe2b5c733d04e238b0d8691db0cfd63a27a93c
+  permission_handler_apple: 44366e37eaf29454a1e7b1b7d736c2cceaeb17ce
+  SSZipArchive: fe6a26b2a54d5a0890f2567b5cc6de5caa600aef
+  url_launcher_ios: 08a3dfac5fb39e8759aeb0abbd5d9480f30fc8b4
+  xp_tool: 5dd106ee424c7131a1b14b78953985e47b9edb2f
+  xp_xlog: 38bb8d5e4a90ff019c65f23e429a2ee9ff95a90e
+
+PODFILE CHECKSUM: 12bab9b5de1b912c0e2bef14f4d6fc06e5d8d55a
+
+COCOAPODS: 1.11.3

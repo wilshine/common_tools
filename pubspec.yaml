@@ -1,0 +1,49 @@
+name: common_tools
+description: Tools
+
+version: 1.0.0
+
+environment:
+  sdk: ">=2.12.2 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  package_info:
+  device_info:
+  url_launcher: 6.1.10
+  mmkvflutter:
+    git:
+      url: ssh://git@gitlab.xiaopeng.local:10022/flutter/packages/mmkvflutter.git
+      ref: 597c4a51cb22581b49016a9ba1f6d10fbabd066f
+#    path: ../mmkvflutter/
+  dio: ^4.0.0
+  intl: 0.18.0
+  path_provider: 2.0.4
+  encrypt: 5.0.1
+  # casbin: 0.1.0
+  flutter_downloader: 
+  open_file_plus: 3.4.1
+  permission_handler: 10.2.0
+  xp_xlog:
+    git:
+      url: ssh://git@gitlab.xiaopeng.local:10022/xp_flutter_pub/xp-flutter-xlog.git
+      ref: '1.2.4'
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^1.0.0
+
+flutter:
+
+  plugin:
+    platforms:
+      android:
+        package: com.xiaopeng.tool.xp_tool
+        pluginClass: XpToolPlugin
+      ios:
+        pluginClass: XpToolPlugin
+
