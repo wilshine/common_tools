@@ -1,22 +1,13 @@
-import 'dart:io';
-
 import 'package:flutter/foundation.dart';
-import 'package:path/path.dart' show join;
-import 'package:path_provider/path_provider.dart';
+import 'package:flutter_xlog/flutter_xlog.dart';
 
 import 'log_manager.dart';
 
 class XLogManager extends LogManager {
   @override
-  Future<void> init(String prefix) async {
-    final logPath = join((await getApplicationDocumentsDirectory()).path, 'xlog');
-    final file = Directory(logPath);
-    bool isExists = await file.exists();
-    if (!isExists) {
-      await file.create();
-    }
-    // XpXlog.initXlog(logPath, prefix, '');
-    // XpXlog.flush();
+  Future<void> init({required String cacheDir,
+    required String logDir,}) async {
+    await XLog.open(XLogConfig(cacheDir: cacheDir, logDir: logDir));
   }
 
   @override
@@ -24,7 +15,7 @@ class XLogManager extends LogManager {
     if (kDebugMode) {
       print(msg.toString());
     } else {
-      // XpXlog.debug(tag, msg);
+      XLog.d(tag, msg);
     }
   }
 
@@ -33,7 +24,7 @@ class XLogManager extends LogManager {
     if (kDebugMode) {
       print(msg.toString());
     } else {
-      // XpXlog.info(tag, msg);
+      XLog.i(tag, msg);
     }
   }
 
@@ -42,7 +33,7 @@ class XLogManager extends LogManager {
     if (kDebugMode) {
       print(msg.toString());
     } else {
-      // XpXlog.warning(tag, msg);
+      XLog.w(tag, msg);
     }
   }
 
@@ -51,7 +42,7 @@ class XLogManager extends LogManager {
     if (kDebugMode) {
       print(msg.toString());
     } else {
-      // XpXlog.error(tag, msg);
+      XLog.e(tag, msg);
     }
   }
 }

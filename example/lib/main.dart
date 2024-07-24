@@ -286,8 +286,8 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void test10() async {
-    await LogManager.instance.init('test');
-    LogManager.instance.debug('aaaa', 'asdfadsfd');
+    // await LogManager.instance.init('test');
+    // LogManager.instance.debug('aaaa', 'asdfadsfd');
   }
 }
 

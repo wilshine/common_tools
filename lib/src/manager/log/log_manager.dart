@@ -23,7 +23,8 @@ abstract class LogManager {
     _instance = instance;
   }
 
-  Future<void> init(String prefix) async {
+  Future<void> init({required String cacheDir,
+    required String logDir,}) async {
     throw UnimplementedError('init() has not been implemented.');
   }
 

@@ -26,7 +26,8 @@ export 'src/url_util.dart';
 export 'common_tools_platform_interface.dart';
 export 'src/manager/download/download_manager.dart';
 export 'src/manager/permission/permission_manager.dart';
-export 'src/manager/log/log_manager.dart';
+export 'src/logger_util.dart';
+export 'src/net/ws_dio_http.dart';
 
 /// 工具库入口 必须先进行初始化
 class XPToolManager {

@@ -20,6 +20,7 @@ class _PermissionHandlerWidgetState extends State<PermissionHandlerWidget> {
     children.addAll(getWidgets());
     children.addAll(Permission.values
         .where((permission) {
+          print('>>>>>permission  $permission');
       if (Platform.isIOS) {
         return permission != Permission.unknown &&
             permission != Permission.sms &&
@@ -110,7 +111,7 @@ class _PermissionState extends State<PermissionWidget> {
     return ListTile(
       title: Text(
         _permission.toString(),
-        style: Theme.of(context).textTheme.bodyText1,
+        style: Theme.of(context).textTheme.bodyMedium,
       ),
       subtitle: Text(
         _permissionStatus.toString(),

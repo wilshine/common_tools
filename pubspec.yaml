@@ -10,22 +10,18 @@ dependencies:
   flutter:
     sdk: flutter
 
-  package_info:
-  device_info:
+  package_info_plus:
+  device_info_plus:
   url_launcher: 6.1.10
-  mmkvflutter:
-    git:
-      url: ssh://git@gitlab.xiaopeng.local:10022/flutter/packages/mmkvflutter.git
-      ref: 597c4a51cb22581b49016a9ba1f6d10fbabd066f
-#    path: ../mmkvflutter/
-  dio: ^4.0.0
+  mmkv:
+  dio: 5.5.0+1
   intl: 0.18.0
   path_provider: 2.0.4
   encrypt: 5.0.1
-  # casbin: 0.1.0
-  flutter_downloader: 
+  flutter_downloader:
   open_file_plus: 3.4.1
-  permission_handler: 10.2.0
+  permission_handler: 11.3.1
+  flutter_xlog:
 
 dev_dependencies:
   flutter_test:
@@ -38,7 +34,7 @@ flutter:
     platforms:
       android:
         package: com.ws.tool.common_tools
-        pluginClass: XpToolPlugin
+        pluginClass: WsToolPlugin
       ios:
         pluginClass: XpToolPlugin
 

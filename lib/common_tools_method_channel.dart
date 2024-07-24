@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:mmkvflutter/mmkv.dart';
+import 'package:mmkv/mmkv.dart';
 import 'src/i18n/lang/en_us.dart';
 import 'src/i18n/lang/zh_cn.dart';
 import 'package:common_tools/common_tools.dart';

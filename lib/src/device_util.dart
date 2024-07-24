@@ -1,14 +1,53 @@
 import 'dart:io';
 
-import 'package:device_info/device_info.dart';
+import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 import 'package:path_provider/path_provider.dart';
+import 'dart:ui' as ui;
 
 /// 设备相关工具类
 ///
 ///
 class DeviceUtil {
+
+
+
+  /// 单例模式
+  factory DeviceUtil() => _getInstance();
+  static DeviceUtil get instance => _getInstance();
+  static DeviceUtil? _instance;
+  DeviceUtil._internal();
+  static DeviceUtil _getInstance() {
+    _instance ??= DeviceUtil._internal();
+    return _instance!;
+  }
+
+  late String deviceId;
+  late AndroidDeviceInfo androidDeviceInfo;
+  late IosDeviceInfo iosInfo;
+  late PackageInfo packageInfo;
+
+  Future<void> init() async {
+    packageInfo = await PackageInfo.fromPlatform();
+    var deviceInfo = DeviceInfoPlugin();
+    if(Platform.isAndroid) {
+      androidDeviceInfo = await deviceInfo.androidInfo;
+    } else {
+      iosInfo = await deviceInfo.iosInfo;
+    }
+    if (Platform.isIOS) { // import 'dart:io'
+      deviceId = iosInfo.identifierForVendor ?? ''; // unique ID on iOS
+    } else if(Platform.isAndroid) {
+      deviceId = androidDeviceInfo.id!; // unique ID on Android
+    }
+  }
+
+  String getLanguageCode() {
+    return ui.window.locale.languageCode;
+  }
+
   /// 沉浸式设置
   static void immersionSetting() {
     if (Platform.isAndroid) {
@@ -79,7 +118,7 @@ class DeviceUtil {
   Future<bool> isIpad() async {
     DeviceInfoPlugin deviceInfo = DeviceInfoPlugin();
     IosDeviceInfo info = await deviceInfo.iosInfo;
-    return Future(() => info.utsname.machine.toLowerCase().contains("ipad"));
+    return Future(() => info.utsname.machine?.toLowerCase().contains("ipad") ?? false);
   }
 
   /// 返回设备唯一ID 支持Android、iOS
@@ -87,7 +126,7 @@ class DeviceUtil {
     DeviceInfoPlugin deviceInfoPlugin = DeviceInfoPlugin();
     if (Platform.isAndroid) {
       AndroidDeviceInfo androidDeviceInfo = await deviceInfoPlugin.androidInfo;
-      return Future.value(androidDeviceInfo.androidId);
+      return Future.value(androidDeviceInfo.id);
     } else if (Platform.isIOS) {
       IosDeviceInfo iosDeviceInfo = await deviceInfoPlugin.iosInfo;
       return Future.value(iosDeviceInfo.identifierForVendor);
@@ -167,5 +206,32 @@ class DeviceUtil {
     // getExternalStorageDir().then((value) => print(value));
     // getExternalCacheDirs().then((value) => print(value));
     // getExternalStorageDirs().then((value) => print(value));
+  }
+
+
+  /// 白色文字
+  static void lightStatusTheme() {
+    SystemUiOverlayStyle dark = const SystemUiOverlayStyle(
+      // systemNavigationBarColor: Color(0xFF000000),
+      systemNavigationBarDividerColor: null,
+      statusBarColor: Colors.transparent,
+      systemNavigationBarIconBrightness: Brightness.dark,
+      statusBarIconBrightness: Brightness.light,
+      statusBarBrightness: Brightness.dark,
+    );
+    SystemChrome.setSystemUIOverlayStyle(dark);
+  }
+
+  /// 黑色文字
+  static void dartStatusTheme() {
+    SystemUiOverlayStyle dark = const SystemUiOverlayStyle(
+      // systemNavigationBarColor: Color(0xFF000000),
+      systemNavigationBarDividerColor: null,
+      statusBarColor: Colors.transparent,
+      systemNavigationBarIconBrightness: Brightness.light,
+      statusBarIconBrightness: Brightness.dark,
+      statusBarBrightness: Brightness.light,
+    );
+    SystemChrome.setSystemUIOverlayStyle(dark);
   }
 }
