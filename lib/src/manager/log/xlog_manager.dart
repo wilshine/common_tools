@@ -12,8 +12,9 @@ class XLogManager extends LogManager {
 
   @override
   void debug(String tag, dynamic msg) {
+    String txt = '[$tag] ${DateTime.now()}---> $msg';
     if (kDebugMode) {
-      print(msg.toString());
+      print(txt);
     } else {
       XLog.d(tag, msg);
     }
@@ -21,8 +22,9 @@ class XLogManager extends LogManager {
 
   @override
   void info(String tag, dynamic msg) {
+    String txt = '[$tag] ${DateTime.now()}---> $msg';
     if (kDebugMode) {
-      print(msg.toString());
+      print(txt);
     } else {
       XLog.i(tag, msg);
     }
@@ -30,8 +32,9 @@ class XLogManager extends LogManager {
 
   @override
   void warning(String tag, dynamic msg) {
+    String txt = '[$tag] ${DateTime.now()}---> $msg';
     if (kDebugMode) {
-      print(msg.toString());
+      print(txt);
     } else {
       XLog.w(tag, msg);
     }
@@ -39,8 +42,9 @@ class XLogManager extends LogManager {
 
   @override
   void error(String tag, dynamic msg) {
+    String txt = '[$tag] ${DateTime.now()}---> $msg';
     if (kDebugMode) {
-      print(msg.toString());
+      print(txt);
     } else {
       XLog.e(tag, msg);
     }

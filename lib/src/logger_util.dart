@@ -55,12 +55,10 @@ class Logger {
   /// [msg]  日志信息
   /// [module]  模块名
   static void debug(dynamic msg, {String tag = ''}) {
-    _print(msg.toString());
     LogManager.instance.debug(tag, msg);
   }
 
   static void info(dynamic msg, {String tag = ''}) {
-    _print(msg.toString());
     LogManager.instance.info(tag, msg);
   }
 
@@ -71,9 +69,12 @@ class Logger {
     }
   }
 
+  static void warning(String msg, {String tag = ''}) {
+    LogManager.instance.warning(tag, msg);
+  }
+
   /// error级别的日志，需要做记录
   static void error(String msg, {String tag = ''}) {
-    _print(error.toString());
     LogManager.instance.error(tag, msg);
   }
 }
