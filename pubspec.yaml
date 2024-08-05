@@ -13,7 +13,7 @@ dependencies:
   package_info_plus:
   device_info_plus:
   url_launcher: 6.1.10
-  mmkv:
+  mmkv: 1.3.9
   dio: 5.5.0+1
   intl: 0.18.0
   path_provider: 2.1.3
@@ -36,5 +36,5 @@ flutter:
         package: com.ws.tool.common_tools
         pluginClass: WsToolPlugin
       ios:
-        pluginClass: XpToolPlugin
+        pluginClass: WsToolPlugin
 

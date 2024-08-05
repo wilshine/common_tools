@@ -3,7 +3,7 @@
 # Run `pod lib lint xp_tool.podspec` to validate before publishing.
 #
 Pod::Spec.new do |s|
-  s.name             = 'xp_tool'
+  s.name             = 'common_tools'
   s.version          = '0.0.1'
   s.summary          = 'A new Flutter plugin project.'
   s.description      = <<-DESC
